@@ -11,6 +11,10 @@ body {
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
+a {
+  text-decoration: none;
+  color: #3f84d5;
+}
 
 img {
   box-shadow: 0px 6px 0px 0px #ffcf1e;
@@ -20,6 +24,12 @@ header {
   background-color: #bc091c;
   width: 100vw;
   position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav img,
+.search-bar img {
+  box-shadow: none;
 }
 
 header > nav {
@@ -55,10 +65,13 @@ header > .search-bar {
 .two-column {
   display: grid;
   grid-template-columns: 1fr 550px;
-  padding: 5rem 6rem;
+  padding: 1rem 5rem;
 }
 main {
-  padding-right: 5rem;
+  margin-right: 3rem;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
 }
 main > .title-container {
   display: flex;
@@ -123,6 +136,9 @@ aside {
   background-color: #f3f3f3;
   padding: 1.5rem;
   border-radius: 10px;
+  max-height: fit-content;
+  position: sticky;
+  top: 160px;
 }
 article {
   display: flex;
@@ -134,4 +150,117 @@ article > img {
 }
 .article-title {
   font-weight: bold;
+}
+.article-title:hover {
+  color: #3f84d5;
+  cursor: pointer;
+}
+
+.leasing-offers {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.leasing-offers img {
+  box-shadow: none;
+}
+.offer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.offer-header-text p {
+  font-size: 0.8rem;
+}
+.offer-header-text a {
+  color: #3f84d5;
+  text-decoration: none;
+}
+.offer-header button {
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  color: #3f84d5;
+  font-weight: bold;
+  cursor: pointer;
+}
+.offer-header button:hover {
+  border-color: #3f84d5;
+}
+
+.faq {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.faq-title {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.faqs-container {
+  display: flex;
+  flex-direction: row;
+  width: 860px;
+  gap: 2rem;
+}
+.faqs-list {
+  flex: 1;
+}
+details > summary {
+  list-style: none;
+  padding-bottom: 5px;
+  position: relative;
+}
+details > summary > strong {
+  font-weight: 400;
+}
+details > summary::after {
+  content: '+';
+  position: absolute;
+  color: #3f84d5;
+  right: 0;
+}
+details[open] > summary {
+  padding-bottom: 15px;
+}
+details[open] > summary::after {
+  content: '-';
+}
+summary:hover {
+  cursor: pointer;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+.item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+footer {
+  margin-top: 5rem;
+  width: 100vw;
+  height: 800px;
+  background-color: #1a262d;
+}
+
+.article-list {
+  display: flex;
+  gap: 5rem;
+  padding-top: 1rem;
+}
+.article-list li {
+  list-style: none;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 1rem;
+}
+.article-list li a {
+  color: black;
+}
+.article-list li:hover a {
+  color: #3f84d5;
 }
